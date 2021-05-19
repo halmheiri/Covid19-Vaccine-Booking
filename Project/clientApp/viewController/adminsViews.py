@@ -30,6 +30,7 @@ def medical_add_medical_issue(request):
     return render(request, 'admin/medical-issues/add-edit-eligibility-table.html', context)
 
 
+
 def medical_edit_medical_issue(request):
     context = {
         "edit_medical_issue": True,

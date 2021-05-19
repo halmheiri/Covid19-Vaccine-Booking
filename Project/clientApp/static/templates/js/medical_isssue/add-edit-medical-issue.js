@@ -3,7 +3,8 @@ $(document).ready(function () {
      //validate admin
          validate_user('admin')
     const medicalIssueForm = $("#form");
-         
+
+
     if (industryForm.attr('method') == 'POST')
         formSubmit(medicalIssueForm, true, 'Medicacl Issue added successfully');
     else {

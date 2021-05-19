@@ -7,6 +7,7 @@ $(document).ready(function () {
 });
 
 
+
 function get_medical_issues(url) {
     $.ajax({
         type: 'GET',
