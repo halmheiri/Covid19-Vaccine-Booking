@@ -2,13 +2,13 @@ $(document).ready(function () {
 
      //validate admin
          validate_user('admin')
-    get_industries('/api/industries/')
+    get_medical_issues('/api/medical-issues/')
 
 
 });
 
 
-function get_industries(url) {
+function get_medical_issues(url) {
     $.ajax({
         type: 'GET',
         contentType: "application/json; charset=utf-8",
@@ -21,16 +21,16 @@ function get_industries(url) {
                     data[i].id,
                     data[i].name,
                     ()=>{
-                      if (data[i].priority) {
+                      if (data[i].vaccineEligibility) {
                     return '<i class="material-icons md-24">done</i>'
                 } else {
                         return '<i class="material-icons md-24">close</i>'
                 }
                     },
-                    '<a href="industry/' + data[i].id + '/edit" class="edit"><i\n' +
+                    '<a href="medical-issue-eligibility/' + data[i].id + '/edit" class="edit"><i\n' +
                     '                                class="material-icons"\n' +
                     '                                title="Edit">&#xE254;</i></a>' +
-                    '    <a  onclick="deleteEntity(&quot/api/industries/' + data[i].id + '&quot)" class="delete" style="cursor: pointer"><i\n' +
+                    '    <a  onclick="deleteEntity(&quot/api/medical-issues/' + data[i].id + '&quot)" class="delete" style="cursor: pointer"><i\n' +
                     '                                class="material-icons"\n' +
                     '                                title="Delete">&#xe888;</i></a>'
                 ]).draw(false);
