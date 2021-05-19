@@ -4,7 +4,6 @@ $(document).ready(function () {
          validate_user('admin')
     get_medical_issues('/api/medical-issues/')
 
-
 });
 
 
